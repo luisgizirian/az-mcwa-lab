@@ -1,0 +1,95 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Common.Lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Common.Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.Lib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Common.Lib/1.0.0": {
+      "type": "project",
+      "path": "../Common.Lib/Common.Lib.csproj",
+      "msbuildProject": "../Common.Lib/Common.Lib.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Common.Lib >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/luisgizirian/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/luisgizirian/Projects/az-mcwa-lab/Api.Internal/Api.Internal.csproj",
+      "projectName": "Api.Internal",
+      "projectPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Api.Internal/Api.Internal.csproj",
+      "packagesPath": "/Users/luisgizirian/.nuget/packages/",
+      "outputPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Api.Internal/obj/",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/Users/luisgizirian/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj": {
+              "projectPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

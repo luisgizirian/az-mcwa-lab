@@ -1,0 +1,138 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/luisgizirian/Projects/az-mcwa-lab/Site.External/Site.External.csproj": {}
+  },
+  "projects": {
+    "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj",
+        "projectName": "Common.Lib",
+        "projectPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj",
+        "packagesPath": "/Users/luisgizirian/.nuget/packages/",
+        "outputPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/luisgizirian/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/luisgizirian/Projects/az-mcwa-lab/Site.External/Site.External.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/luisgizirian/Projects/az-mcwa-lab/Site.External/Site.External.csproj",
+        "projectName": "Site.External",
+        "projectPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Site.External/Site.External.csproj",
+        "packagesPath": "/Users/luisgizirian/.nuget/packages/",
+        "outputPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Site.External/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/luisgizirian/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj": {
+                "projectPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.20, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
