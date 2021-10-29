@@ -11,6 +11,8 @@
 
 @{ foreach (var item in Model.Result)
     {
+        <label>@item.Summary</label>
         <label>@item.TemperatureC</label>
+        <br />
     }
 }

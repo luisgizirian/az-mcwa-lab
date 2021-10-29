@@ -42,12 +42,15 @@ namespace Site.External.Pages
             if (!string.IsNullOrEmpty(raw))
             {
                 Result = JsonSerializer.Deserialize<IEnumerable<WeatherForecast>>(
-                    raw);
+                    raw,
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                _logger.LogInformation("Response obtained from cache.");
             }
             else
             {
                 Result = await GetFromPersistentStorage();
                 await _cache.SetStringAsync(Constants.CACHE_KEY, JsonSerializer.Serialize(Result));
+                _logger.LogInformation("Response cached.");
             }
 
             
@@ -55,12 +58,13 @@ namespace Site.External.Pages
 
         private async Task<IEnumerable<WeatherForecast>> GetFromPersistentStorage()
         {
-            var resp = await this.Client.GetAsync($"api/weatherforecast");
+            var resp = await this.Client.GetAsync("weatherforecast");
             
             resp.EnsureSuccessStatusCode();
 
             var original = JsonSerializer.Deserialize<IEnumerable<WeatherForecast>>(
-                await resp.Content.ReadAsStringAsync());
+                await resp.Content.ReadAsStringAsync(),
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             return original;
             //

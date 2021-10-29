@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+
+  redis:
+     image: mcr.microsoft.com/oss/bitnami/redis:6.0.8
+     environment: 
+       - ALLOW_EMPTY_PASSWORD=yes
+     restart: always
+
+  site.external:
+    image: ${DOCKER_REGISTRY-}site
+    build:
+      context: .
+      dockerfile: Site.External/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5000:80"
+
+  api.internal:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: Api.Internal/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
