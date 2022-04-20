@@ -2,14 +2,20 @@ version: '3.4'
 
 services:
 
+  proxy:
+    image: azmcwalab.azurecr.io/proxy:1.14.2
+    restart: always
+    ports:
+      - "80:80"
+  
   redis:
-     image: mcr.microsoft.com/oss/bitnami/redis:6.0.8
+     image: azmcwalab.azurecr.io/redis:alpine
      environment: 
        - ALLOW_EMPTY_PASSWORD=yes
      restart: always
 
-  site.external:
-    image: ${DOCKER_REGISTRY-}site
+  first.site:
+    image: azmcwalab.azurecr.io/site:0.1
     build:
       context: .
       dockerfile: Site.External/Dockerfile
@@ -18,8 +24,18 @@ services:
     ports:
       - "5000:80"
 
+  second.site:
+    image: azmcwalab.azurecr.io/site:0.1
+    build:
+      context: .
+      dockerfile: Site.External/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5001:80"
+
   api.internal:
-    image: ${DOCKER_REGISTRY-}api
+    image: azmcwalab.azurecr.io/api:0.1
     build:
       context: .
       dockerfile: Api.Internal/Dockerfile
