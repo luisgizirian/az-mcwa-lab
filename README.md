@@ -1,5 +1,5 @@
 # Azure Multi-Container WebApp Lab (az-mcwa-lab)
-Sample Azure WebApp MultiContainer repo for low cost multi site deployments.
+Azure WebApp (Multi) Container way to do low cost multi HTTP containers deployments for testing.
 
 ## Why?
 
@@ -22,4 +22,7 @@ That's right! We'll use a its proxy capabilities, to reach different endpoints f
 *[elaborate]*
 
 ## Run it!
+
+> Please keep in mind that, although tempting and cheap, going to PROD with something like this, can eventually lead you into troubles down the line. Our suggestion: **use for testing only**
+
 *[elaborate]*
