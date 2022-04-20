@@ -3,7 +3,7 @@ Azure Web App (Multi) Container way to get a low cost containerized App Service 
 
 ## Why?
 
-Have you ever needed to dev/test a containerized multiservice application using docker compose,  running in the cloud? Has your application more than one host exposed through HTTP (*)?
+Have you ever needed to dev/test a containerized multiservice application using docker compose, running in the cloud? Has your application more than one host (container) exposed through an HTTP (*) port?
 
 (*) As you'll find in the "Limitations" section, under "Docker Compose", being primarily an App Service, attaches itself to a **single** container that exposes ports 8080 or 80, mapping it as the HTTP(S) entry point. *Source post: https://azure.github.io/AppService/2018/05/07/Multi-container-Linux-Web-App.html* 
 
