@@ -10,35 +10,19 @@ services:
   
   redis:
      image: azmcwalab.azurecr.io/redis:alpine
-     environment: 
-       - ALLOW_EMPTY_PASSWORD=yes
      restart: always
 
   first.site:
     image: azmcwalab.azurecr.io/site:0.1
-    build:
-      context: .
-      dockerfile: Site.External/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "5000:80"
 
   second.site:
     image: azmcwalab.azurecr.io/site:0.1
-    build:
-      context: .
-      dockerfile: Site.External/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "5001:80"
 
   api.internal:
     image: azmcwalab.azurecr.io/api:0.1
-    build:
-      context: .
-      dockerfile: Api.Internal/Dockerfile
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+    restart: always
 

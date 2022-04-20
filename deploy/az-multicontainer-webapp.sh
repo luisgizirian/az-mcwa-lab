@@ -15,6 +15,14 @@ uniqueAcr=azmcwalab
 
 az account set -s $accountId
 
+docker build -t site:latest -f ../src/Site.External/Dockerfile ../src/.
+docker build -t api:latest -f ../src/Api.Internal/Dockerfile ../src/.
+docker build -t proxy:latest -f ../proxy/Dockerfile ../.
+
+docker tag site:latest $uniqueAcr.azurecr.io/site:0.1
+docker tag api:latest $uniqueAcr.azurecr.io/api:0.1
+docker tag redis:alpine $uniqueAcr.azurecr.io/redis:alpine
+
 az group create -n $samplerg -l $location
 
 # The ACR that will hold all images in Azure
@@ -30,14 +38,6 @@ ACR_KEY=$(az acr credential show -n $uniqueAcr --query "passwords[0].value" -o t
 # # cd ../src
 # # az acr build  -g $samplerg --registry $uniqueAcr --image sync:0.6 tenant-site/.
 # # cd ../deploy
-
-docker build -t site:latest -f ../src/Site.External/Dockerfile ../src/.
-docker build -t api:latest -f ../src/Api.Internal/Dockerfile ../src/.
-docker build -t proxy:latest -f ../proxy/Dockerfile ../.
-
-docker tag site:latest $uniqueAcr.azurecr.io/site:0.1
-docker tag api:latest $uniqueAcr.azurecr.io/api:0.1
-docker tag redis:alpine $uniqueAcr.azurecr.io/redis:alpine
 
 az acr login --name $uniqueAcr
 

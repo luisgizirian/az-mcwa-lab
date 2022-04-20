@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj": {}
+    "/Users/luisgizirian/src/az-mcwa-lab/src/Common.Lib/Common.Lib.csproj": {}
   },
   "projects": {
-    "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj": {
+    "/Users/luisgizirian/src/az-mcwa-lab/src/Common.Lib/Common.Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj",
+        "projectUniqueName": "/Users/luisgizirian/src/az-mcwa-lab/src/Common.Lib/Common.Lib.csproj",
         "projectName": "Common.Lib",
-        "projectPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/Common.Lib.csproj",
+        "projectPath": "/Users/luisgizirian/src/az-mcwa-lab/src/Common.Lib/Common.Lib.csproj",
         "packagesPath": "/Users/luisgizirian/.nuget/packages/",
-        "outputPath": "/Users/luisgizirian/Projects/az-mcwa-lab/Common.Lib/obj/",
+        "outputPath": "/Users/luisgizirian/src/az-mcwa-lab/src/Common.Lib/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/luisgizirian/.config/NuGet/NuGet.Config"
+          "/Users/luisgizirian/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -58,7 +58,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.100-rc.1.21463.6/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -3,17 +3,17 @@ version: '3.4'
 services:
 
   redis:
-     image: mcr.microsoft.com/oss/bitnami/redis:6.0.8
-
-  site.external:
-    image: ${DOCKER_REGISTRY-}site
-    build:
-      context: .
-      dockerfile: Site.External/Dockerfile
+     image: redis:alpine
+  
+  # site.external:
+  #   image: ${DOCKER_REGISTRY-}site
+  #   build:
+  #     context: .
+  #     dockerfile: src/Site.External/Dockerfile
 
   api.internal:
     image: ${DOCKER_REGISTRY-}api
     build:
       context: .
-      dockerfile: Api.Internal/Dockerfile
+      dockerfile: src/Api.Internal/Dockerfile
 
