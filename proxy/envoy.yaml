@@ -21,13 +21,13 @@ static_resources:
               - match:
                   prefix: "/first/"
                 route:
-                auto_host_rewrite: true
+                  auto_host_rewrite: true
                   prefix_rewrite: "/"
                   cluster: site1
               - match:
                   prefix: "/second/"
                 route:
-                auto_host_rewrite: true
+                  auto_host_rewrite: true
                   prefix_rewrite: "/"
                   cluster: site2
           http_filters:
@@ -41,7 +41,7 @@ static_resources:
     - socket_address:
         address: first.site
         port_value: 80
-  - name: identity
+  - name: site2
     connect_timeout: 0.25s
     type: strict_dns
     lb_policy: round_robin

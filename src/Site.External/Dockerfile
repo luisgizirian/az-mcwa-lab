@@ -1,5 +1,3 @@
-#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
 FROM mcr.microsoft.com/dotnet/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
@@ -9,7 +7,10 @@ WORKDIR /src
 COPY src/Site.External/Site.External.csproj Site.External/
 COPY src/Common.Lib/Common.Lib.csproj Common.Lib/
 RUN dotnet restore "Site.External/Site.External.csproj"
-COPY . .
+
+COPY src/Site.External ./Site.External/
+COPY src/Common.Lib ./Common.Lib/
+
 WORKDIR "/src/Site.External"
 RUN dotnet build "Site.External.csproj" -c Release -o /app/build
 

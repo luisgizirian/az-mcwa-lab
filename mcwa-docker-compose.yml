@@ -3,26 +3,26 @@ version: '3.4'
 services:
 
   proxy:
-    image: azmcwalab.azurecr.io/proxy:1.14.2
+    image: azmcwalabtrial.azurecr.io/proxy:1.14.2
     restart: always
     ports:
       - "80:80"
   
   redis:
-     image: azmcwalab.azurecr.io/redis:alpine
+     image: azmcwalabtrial.azurecr.io/redis:alpine
      restart: always
 
   first.site:
-    image: azmcwalab.azurecr.io/site:0.1
+    image: azmcwalabtrial.azurecr.io/site:0.1
     ports:
       - "5000:80"
 
   second.site:
-    image: azmcwalab.azurecr.io/site:0.1
+    image: azmcwalabtrial.azurecr.io/site:0.1
     ports:
       - "5001:80"
 
   api.internal:
-    image: azmcwalab.azurecr.io/api:0.1
+    image: azmcwalabtrial.azurecr.io/api:0.1
     restart: always
 
