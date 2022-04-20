@@ -1,5 +1,5 @@
-# Azure Multi-Container WebApp Lab (az-mcwa-lab)
-Azure WebApp (Multi) Container way to do low cost multi HTTP containers deployments for testing.
+# Azure Multi-Container Web App Lab (az-mcwa-lab)
+Azure Web App (Multi) Container way to get a low cost containerized App Service with more than one HTTP entry point.
 
 ## Why?
 
