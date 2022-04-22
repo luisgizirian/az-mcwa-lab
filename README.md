@@ -9,7 +9,7 @@ Have you ever needed to dev/test a containerized multiservice application using 
 
 When working on projects that contain many services (or microservices), a quick option is to use a Docker Compose + Azure Web App for (Multi) Containers. It's an easy way to pack a bunch of microservices (containerized) using Docker Compose, with one of them acting as the main HTTP entry point.
 
-At first sight, a limitation for advance scenarios is its **single** HTTP entry point nature. When multiple HTTP endpoints coexist under the same umbrella the solution seems to fell short.
+A limitation for advanced scenarios is its **single** HTTP entry point nature. When multiple HTTP endpoints coexist under the same umbrella the solution seems to fell short.
 
 **We'll show a way to deploy multi HTTP exposed endpoint, bypassing this limitation.**
 
